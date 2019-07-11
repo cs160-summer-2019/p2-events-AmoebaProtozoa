@@ -39,9 +39,14 @@
 
 
 <script type="text/javascript">
-
-	// your solution here
-
+ //howt to set timed event: https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery
+  var appendbubble = setInterval(function(){ 
+  $( ".shape-container" ).append( "<div class='p2-circle bg-blue'></div>" );
+  }, 1000);
+  
+  $( "button" ).click(function() {
+  clearInterval(appendbubble);
+  });
 </script>
 </body>
 </html>
